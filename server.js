@@ -1,9 +1,10 @@
+import 'dotenv/config'
 import logger from './logger.js'
 import express from 'express'
 import supabase from './supabase.js'
 
 const app = new express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
